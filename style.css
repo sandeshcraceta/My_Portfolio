@@ -1,0 +1,162 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:transparent;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:0.4s;
+  z-index:1000;
+}
+
+nav.scrolled{
+  background:#111;
+  box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.logo{
+  color:#ff004f;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+  color:#ff004f;
+}
+
+/* SECTION */
+section{
+  padding:120px 8%;
+  min-height:100vh;
+}
+
+h1{
+  margin-bottom:20px;
+  font-size:35px;
+  color:#ff004f;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.hero-text h1{
+  font-size:50px;
+}
+
+.hero-text span{
+  color:#ff004f;
+}
+
+.typing{
+  margin:15px 0;
+  font-size:22px;
+  color:#ccc;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:#ff004f;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  color:#ff004f;
+  transform:scale(1.1);
+}
+
+.hero-image img{
+  width:320px;
+  border-radius:50%;
+  border:5px solid #ff004f;
+  box-shadow:0 0 30px #ff004f;
+}
+
+/* SERVICES */
+.services, .projects{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.service-box, .project-card{
+  flex:1 1 250px;
+  background:#1a1a1a;
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.service-box:hover, .project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 20px #ff004f;
+}
+
+/* REVEAL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-image img{
+    margin-top:30px;
+    width:250px;
+  }
+}
